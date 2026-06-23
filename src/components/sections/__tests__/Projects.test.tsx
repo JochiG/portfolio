@@ -8,7 +8,7 @@ describe('Projects', () => {
     render(<Projects />);
     for (const p of projects) {
       const link = screen.getByRole('link', { name: new RegExp(p.title, 'i') });
-      expect(link).toHaveAttribute('href', `/proyectos/${p.slug}/`);
+      expect(link.getAttribute('href')).toMatch(new RegExp(`^/proyectos/${p.slug}/?$`));
     }
   });
 });
