@@ -17,7 +17,7 @@ export function Hero() {
           — pero en el DNI dice {site.fullName}
         </span>
       </h1>
-      <p className="mt-6 max-w-md font-[family-name:var(--font-body)] text-lg opacity-65">{site.tagline}</p>
+      <p className="mt-6 max-w-md font-[family-name:var(--font-body)] text-lg opacity-70">{site.tagline}</p>
       <div className="mt-8 flex flex-wrap gap-2">
         {['React', 'Next.js', 'TypeScript', 'Node'].map((s) => <Chip key={s}>{s}</Chip>)}
       </div>
