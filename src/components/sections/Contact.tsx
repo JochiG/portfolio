@@ -5,8 +5,9 @@ import { MagneticButton } from '@/components/ui/MagneticButton';
 export function Contact() {
   const links = [
     { name: 'WhatsApp', href: `https://wa.me/${site.whatsapp}` },
-    { name: 'Instagram', href: `https://instagram.com/${site.instagram}` },
+    { name: 'LinkedIn', href: `https://linkedin.com/in/${site.linkedin}` },
     { name: 'GitHub', href: `https://github.com/${site.github}` },
+    { name: 'Instagram', href: `https://instagram.com/${site.instagram}` },
     { name: 'Email', href: `mailto:${site.email}` },
   ];
   return (
@@ -22,9 +23,12 @@ export function Contact() {
           </a>
         ))}
       </div>
-      <div className="mt-10 flex justify-center">
-        <MagneticButton href={site.cvUrl} className="border-bone text-bone hover:bg-bone hover:text-espresso">
-          Descargar CV →
+      <div className="mt-10 flex flex-wrap justify-center gap-4">
+        <MagneticButton href={site.cvUrlEs} className="border-bone text-bone hover:bg-bone hover:text-espresso">
+          CV (Español) →
+        </MagneticButton>
+        <MagneticButton href={site.cvUrlEn} className="border-bone text-bone hover:bg-bone hover:text-espresso">
+          CV (English) →
         </MagneticButton>
       </div>
     </section>

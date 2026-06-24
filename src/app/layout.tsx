@@ -12,10 +12,10 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://jochi-garcia.vercel.app'),
-  title: 'José García (Jochi) — Fullstack Engineer',
-  description: 'Portfolio de José Ignacio García Olmos, fullstack / software engineer.',
+  title: 'José García (Jochi) — Fullstack Developer',
+  description: 'Portfolio de José Ignacio García Olmos, fullstack developer. Sitios y sistemas web a medida.',
   openGraph: {
-    title: 'José García (Jochi) — Fullstack Engineer',
+    title: 'José García (Jochi) — Fullstack Developer',
     description: 'Construyo productos web de punta a punta, con buen gusto.',
     images: ['/og.png'],
     type: 'website',

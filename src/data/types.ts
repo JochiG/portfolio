@@ -13,7 +13,7 @@ export type Project = {
 };
 
 export type SkillGroup = {
-  category: 'Frontend' | 'Backend' | 'Tools';
+  category: string;
   items: string[];
 };
 
@@ -40,6 +40,8 @@ export type SiteConfig = {
   whatsapp: string;   // digits only for wa.me
   instagram: string;  // handle without @
   github: string;     // username
+  linkedin: string;   // linkedin.com/in/<this>
   email: string;
-  cvUrl: string;
+  cvUrlEs: string;
+  cvUrlEn: string;
 };

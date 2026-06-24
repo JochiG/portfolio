@@ -19,14 +19,14 @@ export function Hero() {
       </h1>
       <p className="mt-6 max-w-md font-[family-name:var(--font-body)] text-lg opacity-70">{site.tagline}</p>
       <div className="mt-8 flex flex-wrap gap-2">
-        {['React', 'Next.js', 'TypeScript', 'Node'].map((s) => <Chip key={s}>{s}</Chip>)}
+        {['React', 'Next.js', 'TypeScript', 'Supabase'].map((s) => <Chip key={s}>{s}</Chip>)}
       </div>
       <div className="mt-10">
         <MagneticButton href="#proyectos">Ver proyectos →</MagneticButton>
       </div>
       <div className="pointer-events-none absolute right-8 top-1/2 hidden -translate-y-1/2 motion-reduce:block">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/jochi-static.png" alt="" className="h-40 w-40" />
+        <img src="/images/jochi-static.svg" alt="" className="h-44 w-44 drop-shadow-xl" />
       </div>
     </section>
   );

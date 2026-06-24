@@ -13,9 +13,15 @@ export function About() {
             Un poco sobre mí
           </h2>
           <p className="mt-5 max-w-prose font-[family-name:var(--font-body)] text-lg leading-relaxed opacity-75">
-            Soy {site.name}, fullstack engineer. Me apasiona construir productos web prolijos,
-            rápidos y con buen gusto. Disfruto tanto del detalle visual como de una API bien
-            pensada. Busco sumarme a un equipo donde pueda crecer y aportar.
+            Soy {site.name} ({site.nickname}), estudiante de la Licenciatura en Gestión de
+            Tecnología de la Información en UADE (graduación estimada 2026). Construyo productos
+            web de punta a punta para clientes reales: sitios a medida, sistemas de gestión y un
+            SaaS con IA. Disfruto resolver problemas, trabajar bajo presión y entregar con
+            calidad, en tiempo y forma.
+          </p>
+          <p className="mt-4 max-w-prose font-[family-name:var(--font-body)] text-base leading-relaxed opacity-70">
+            Estoy en Buenos Aires, Argentina, con disponibilidad inmediata y abierto a trabajo
+            remoto o presencial en CABA.
           </p>
         </Reveal>
         <Reveal delay={0.1}>

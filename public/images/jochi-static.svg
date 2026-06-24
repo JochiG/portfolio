@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="chrome" cx="38%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="16%" stop-color="#e9ecef"/>
+      <stop offset="40%" stop-color="#9aa0a8"/>
+      <stop offset="66%" stop-color="#565b62"/>
+      <stop offset="85%" stop-color="#c3c7cc"/>
+      <stop offset="100%" stop-color="#2c2f33"/>
+    </radialGradient>
+    <linearGradient id="horizon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eef3f8"/>
+      <stop offset="47%" stop-color="#aab1b9"/>
+      <stop offset="53%" stop-color="#3f444a"/>
+      <stop offset="100%" stop-color="#181b1e"/>
+    </linearGradient>
+    <radialGradient id="spec" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="ball"><circle cx="100" cy="100" r="92"/></clipPath>
+  </defs>
+  <circle cx="100" cy="100" r="92" fill="url(#chrome)"/>
+  <g clip-path="url(#ball)" opacity="0.55">
+    <rect x="8" y="8" width="184" height="184" fill="url(#horizon)"/>
+  </g>
+  <ellipse cx="74" cy="62" rx="32" ry="22" fill="url(#spec)"/>
+  <ellipse cx="128" cy="150" rx="20" ry="10" fill="#ffffff" opacity="0.12"/>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1.5"/>
+</svg>

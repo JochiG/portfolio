@@ -1,7 +1,9 @@
 import type { SkillGroup } from './types';
 
 export const skills: SkillGroup[] = [
-  { category: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'] },
-  { category: 'Backend', items: ['Node.js', 'Express', 'PostgreSQL', 'REST APIs'] },
-  { category: 'Tools', items: ['Git', 'Docker', 'Vite', 'Figma'] },
+  { category: 'Lenguajes', items: ['JavaScript', 'TypeScript', 'Python', 'Java', 'SQL'] },
+  { category: 'Frontend', items: ['React', 'Next.js', 'Vite', 'Tailwind CSS', 'Bootstrap', 'HTML5', 'CSS'] },
+  { category: 'Backend & Datos', items: ['Supabase', 'PostgreSQL', 'MongoDB', 'SQL Server', 'Redis', 'Neo4j'] },
+  { category: 'Mobile', items: ['React Native', 'Expo', 'Flutter', 'Android Studio'] },
+  { category: 'Herramientas & IA', items: ['Git', 'GitHub', 'Figma', 'Jira', 'Trello', 'ChatGPT', 'Claude', 'Copilot'] },
 ];

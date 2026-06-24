@@ -5,7 +5,7 @@ import { Skills } from '../Skills';
 describe('Skills', () => {
   it('renders category headings', () => {
     render(<Skills />);
+    expect(screen.getByText('Lenguajes')).toBeInTheDocument();
     expect(screen.getByText('Frontend')).toBeInTheDocument();
-    expect(screen.getByText('Backend')).toBeInTheDocument();
   });
 });
