@@ -23,14 +23,11 @@ export function interpolatePath(progress: number, anchors: Anchor[]): PathPose {
   return { position: mix(lo.position, hi.position), rotation: mix(lo.rotation, hi.rotation) };
 }
 
-// Jochi stays in the RIGHT margin lane (positive x) and drifts gently in y/z
-// as you scroll, so it never crosses over the left-aligned text. The motion is
-// a soft float — small, smooth deltas between anchors — rather than side-to-side.
+// Default flight path across the page (tweak visually during integration).
 export const jochiAnchors: Anchor[] = [
-  { at: 0.0, position: [2.9, 0.25, 0.0], rotation: [0, 0, 0] },
-  { at: 0.2, position: [3.0, -0.15, 0.3], rotation: [0.1, 0.4, 0.05] },
-  { at: 0.4, position: [2.8, 0.2, 0.1], rotation: [-0.08, 0.9, -0.05] },
-  { at: 0.6, position: [3.0, -0.2, 0.25], rotation: [0.1, 1.3, 0.05] },
-  { at: 0.8, position: [2.85, 0.15, 0.0], rotation: [-0.08, 1.7, -0.05] },
-  { at: 1.0, position: [2.9, -0.1, 0.15], rotation: [0, 2.1, 0] },
+  { at: 0.0, position: [2.2, 0, 0], rotation: [0, 0, 0] },
+  { at: 0.2, position: [-2.2, -0.5, 0], rotation: [0.3, 1.6, 0] },
+  { at: 0.45, position: [2.4, 0.3, -1], rotation: [0, 3.1, 0.2] },
+  { at: 0.7, position: [-2.0, 0, 0], rotation: [0.2, 4.7, 0] },
+  { at: 1.0, position: [0, -0.4, 0.5], rotation: [0, 6.28, 0] },
 ];
