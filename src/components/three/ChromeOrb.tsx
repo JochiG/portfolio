@@ -4,21 +4,21 @@ import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 import type { Mesh } from 'three';
 
-type Props = { position: [number, number, number]; rotation: [number, number, number] };
-
-export function ChromeOrb({ position, rotation }: Props) {
+/** Self-contained chrome sphere: spins idly, bobs gently and tilts slightly
+ *  toward the pointer. It lives inside a small canvas — the travel down the
+ *  page is handled by the DOM widget, not the 3D position. */
+export function ChromeOrb() {
   const ref = useRef<Mesh>(null);
-  const idleSpin = useRef(0);
-  useFrame((_, delta) => {
+  useFrame((state, delta) => {
     if (!ref.current) return;
-    idleSpin.current += delta * 0.15;
-    ref.current.position.set(position[0], position[1], position[2]);
-    ref.current.rotation.set(rotation[0], rotation[1] + idleSpin.current, rotation[2]);
+    ref.current.rotation.y += delta * 0.35;
+    ref.current.position.y = Math.sin(state.clock.elapsedTime * 1.2) * 0.06;
+    ref.current.rotation.x += (state.pointer.y * 0.3 - ref.current.rotation.x) * 0.05;
   });
   return (
     <>
       <Environment preset="studio" />
-      <mesh ref={ref} position={position} rotation={rotation}>
+      <mesh ref={ref}>
         <icosahedronGeometry args={[1, 4]} />
         <meshStandardMaterial metalness={1} roughness={0.08} color="#cfd2d6" envMapIntensity={1.5} />
       </mesh>
