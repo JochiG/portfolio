@@ -40,6 +40,17 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <p className="mt-3 font-[family-name:var(--font-label)] text-sm opacity-60">{project.stack.join(' · ')}</p>
       </header>
 
+      <div className="mt-10 aspect-video overflow-hidden rounded-2xl border border-espresso/10">
+        <Image
+          src={project.cover}
+          alt={`${project.title} — portada`}
+          width={1280}
+          height={720}
+          className="h-full w-full object-cover object-top"
+          priority
+        />
+      </div>
+
       <div className="mt-10 max-w-prose space-y-4 text-lg leading-relaxed opacity-80">
         {project.description.map((para, i) => <p key={i}>{para}</p>)}
       </div>
@@ -49,11 +60,21 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {project.demo && <a href={project.demo} target="_blank" rel="noreferrer" className="text-oxblood underline-offset-4 hover:underline">Demo en vivo</a>}
       </div>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
-        {project.gallery.map((src, i) => (
-          <Image key={i} src={src} alt={`${project.title} captura ${i + 1}`} width={800} height={500} className="rounded-2xl object-cover" />
-        ))}
-      </div>
+      {project.gallery.length > 0 && (
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          {project.gallery.map((src, i) => (
+            <div key={i} className="aspect-[16/10] overflow-hidden rounded-2xl border border-espresso/10">
+              <Image
+                src={src}
+                alt={`${project.title} captura ${i + 1}`}
+                width={1200}
+                height={750}
+                className="h-full w-full object-cover object-top"
+              />
+            </div>
+          ))}
+        </div>
+      )}
 
       <nav className="mt-16 flex justify-between border-t border-espresso/15 pt-6 font-[family-name:var(--font-label)] text-sm">
         {prev ? <Link href={`/proyectos/${prev.slug}/`} className="hover:text-oxblood">← {prev.title}</Link> : <span />}

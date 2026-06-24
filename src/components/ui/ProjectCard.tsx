@@ -13,7 +13,7 @@ export function ProjectCard({ project }: { project: Project }) {
         aria-label={`Ver proyecto ${project.title}`}
       >
         <div className="relative aspect-video overflow-hidden">
-          <Image src={project.cover} alt={project.title} width={640} height={360} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <Image src={project.cover} alt={project.title} width={640} height={360} className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
         </div>
         <div className="p-5">
           <h3 className="font-[family-name:var(--font-display)] text-xl font-bold">{project.title}</h3>
