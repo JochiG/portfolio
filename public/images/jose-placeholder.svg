@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" font-family="'Archivo','Arial',sans-serif">
+  <rect width="400" height="500" rx="20" fill="#1c1916"/>
+  <circle cx="200" cy="205" r="120" fill="url(#cg)" opacity="0.18"/>
+  <defs>
+    <radialGradient id="cg" cx="38%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#9aa0a8"/>
+      <stop offset="100%" stop-color="#3a3d42"/>
+    </radialGradient>
+  </defs>
+  <text x="200" y="245" text-anchor="middle" font-size="150" font-weight="900" fill="#f2ede3" letter-spacing="-4">JG</text>
+  <rect x="160" y="285" width="80" height="5" rx="2" fill="#7c2128"/>
+  <text x="200" y="350" text-anchor="middle" font-size="20" letter-spacing="3" fill="#f2ede3" opacity="0.5">JOSÉ · JOCHI</text>
+  <text x="200" y="385" text-anchor="middle" font-size="14" letter-spacing="2" fill="#f2ede3" opacity="0.35">TU FOTO ACÁ</text>
+</svg>

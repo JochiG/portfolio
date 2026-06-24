@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -40,6 +39,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <p className="mt-3 font-[family-name:var(--font-label)] text-sm opacity-60">{project.stack.join(' · ')}</p>
       </header>
 
+      <div className="mt-10 overflow-hidden rounded-2xl border border-espresso/10 shadow-lg">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={project.cover} alt={`${project.title} — portada`} className="w-full" />
+      </div>
+
       <div className="mt-10 max-w-prose space-y-4 text-lg leading-relaxed opacity-80">
         {project.description.map((para, i) => <p key={i}>{para}</p>)}
       </div>
@@ -49,11 +53,29 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {project.demo && <a href={project.demo} target="_blank" rel="noreferrer" className="text-oxblood underline-offset-4 hover:underline">Demo en vivo</a>}
       </div>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
-        {project.gallery.map((src, i) => (
-          <Image key={i} src={src} alt={`${project.title} captura ${i + 1}`} width={800} height={500} className="rounded-2xl object-cover" />
-        ))}
-      </div>
+      {project.gallery.length > 0 && (
+        <div className="mt-12">
+          <p className="font-[family-name:var(--font-label)] text-xs uppercase tracking-[0.2em] text-oxblood">
+            Recorrido completo
+          </p>
+          <div className="mt-4 space-y-8">
+            {project.gallery.map((src, i) => (
+              <div
+                key={i}
+                className="max-h-[75vh] overflow-y-auto rounded-2xl border border-espresso/10 shadow-lg"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={src}
+                  alt={`${project.title} captura ${i + 1}`}
+                  loading="lazy"
+                  className="w-full"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       <nav className="mt-16 flex justify-between border-t border-espresso/15 pt-6 font-[family-name:var(--font-label)] text-sm">
         {prev ? <Link href={`/proyectos/${prev.slug}/`} className="hover:text-oxblood">← {prev.title}</Link> : <span />}

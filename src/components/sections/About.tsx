@@ -5,7 +5,7 @@ import { Reveal } from '@/components/ui/Reveal';
 
 export function About() {
   return (
-    <section id="about" className="px-6 py-28 md:px-16">
+    <section id="about" className="px-6 py-20 md:px-16 md:py-28">
       <SectionLabel index={1} text="Sobre mí" />
       <div className="mt-8 grid gap-10 md:grid-cols-[1fr_320px] md:items-center">
         <Reveal>
@@ -24,13 +24,13 @@ export function About() {
             remoto o presencial en CABA.
           </p>
         </Reveal>
-        <Reveal delay={0.1}>
+        <Reveal delay={0.1} className="flex justify-center md:block">
           <Image
-            src="/images/jose.jpg"
+            src="/images/jose-placeholder.svg"
             alt="Foto de José García (Jochi)"
             width={320}
             height={400}
-            className="rounded-2xl object-cover"
+            className="aspect-[4/5] w-full max-w-[260px] rounded-2xl object-cover md:max-w-none"
           />
         </Reveal>
       </div>
