@@ -10,7 +10,7 @@ export const site: SiteConfig = {
   instagram: 'jochigarcia_',
   github: 'JochiG',
   linkedin: 'jose-garcia001',
-  email: 'josegarciaolmos@outlook.com',
+  email: 'josegarciaolmos1@outlook.com',
   cvUrlEs: '/cv-jose-garcia-es.pdf',
   cvUrlEn: '/cv-jose-garcia-en.pdf',
 };

@@ -8,6 +8,6 @@ describe('Contact', () => {
     expect(screen.getByRole('link', { name: /whatsapp/i })).toHaveAttribute('href', 'https://wa.me/542478407856');
     expect(screen.getByRole('link', { name: /instagram/i })).toHaveAttribute('href', 'https://instagram.com/jochigarcia_');
     expect(screen.getByRole('link', { name: /github/i })).toHaveAttribute('href', 'https://github.com/JochiG');
-    expect(screen.getByRole('link', { name: /email/i })).toHaveAttribute('href', 'mailto:josegarciaolmos@outlook.com');
+    expect(screen.getByRole('link', { name: /email/i })).toHaveAttribute('href', 'mailto:josegarciaolmos1@outlook.com');
   });
 });
