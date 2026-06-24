@@ -53,30 +53,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {project.demo && <a href={project.demo} target="_blank" rel="noreferrer" className="text-accent underline-offset-4 hover:underline">Demo en vivo</a>}
       </div>
 
-      {project.gallery.length > 0 && (
-        <div className="mt-12">
-          <p className="font-[family-name:var(--font-label)] text-xs uppercase tracking-[0.2em] text-accent">
-            Recorrido completo
-          </p>
-          <div className="mt-4 space-y-8">
-            {project.gallery.map((src, i) => (
-              <div
-                key={i}
-                className="max-h-[75vh] overflow-y-auto rounded-2xl border border-border shadow-lg"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={src}
-                  alt={`${project.title} captura ${i + 1}`}
-                  loading="lazy"
-                  className="w-full"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
       <nav className="mt-16 flex justify-between border-t border-border pt-6 font-[family-name:var(--font-label)] text-sm">
         {prev ? <Link href={`/proyectos/${prev.slug}/`} className="hover:text-accent">← {prev.title}</Link> : <span />}
         {next ? <Link href={`/proyectos/${next.slug}/`} className="hover:text-accent">{next.title} →</Link> : <span />}

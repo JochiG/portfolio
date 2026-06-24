@@ -14,7 +14,7 @@ export const projects: Project[] = [
     ],
     stack: ['Next.js', 'TypeScript', 'Supabase', 'IA / LLM', 'Google Calendar API'],
     cover: '/images/beacon-ia/cover.png',
-    gallery: ['/images/beacon-ia/full.png'],
+    gallery: [],
     demo: 'https://beacon-ia.com',
   },
   {
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     ],
     stack: ['Next.js', 'TypeScript', 'Auth', 'SEO'],
     cover: '/images/nsinversiones/cover.png',
-    gallery: ['/images/nsinversiones/full.png'],
+    gallery: [],
     demo: 'https://nsinversiones.com',
   },
   {
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     ],
     stack: ['Next.js', 'Google Calendar API', 'Google Maps API'],
     cover: '/images/paolomasajes/cover.png',
-    gallery: ['/images/paolomasajes/full.png'],
+    gallery: [],
     demo: 'https://paolomasajes.com',
   },
   {
