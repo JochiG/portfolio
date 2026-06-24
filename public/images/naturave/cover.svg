@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" font-family="'Archivo','Arial',sans-serif">
+  <rect width="1200" height="675" fill="#1c1916"/>
+  <circle cx="980" cy="150" r="220" fill="url(#g)" opacity="0.5"/>
+  <defs>
+    <radialGradient id="g" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#9aa0a8"/>
+      <stop offset="100%" stop-color="#3a3d42"/>
+    </radialGradient>
+  </defs>
+  <text x="64" y="300" fill="#7c2128" font-size="26" font-weight="700" letter-spacing="6">SISTEMA DE GESTIÓN</text>
+  <text x="60" y="400" fill="#f2ede3" font-size="120" font-weight="900" letter-spacing="-3">NATURAVE</text>
+  <text x="64" y="470" fill="#f2ede3" font-size="30" opacity="0.6">Inventario · ventas · clientes · proveedores · caja</text>
+  <text x="64" y="620" fill="#f2ede3" font-size="22" opacity="0.4">App interna — captura próximamente</text>
+</svg>
