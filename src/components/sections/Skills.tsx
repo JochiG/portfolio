@@ -15,7 +15,7 @@ export function Skills() {
       <div className="mt-12 grid gap-10 md:grid-cols-3">
         {skills.map((group, i) => (
           <Reveal key={group.category} delay={i * 0.08}>
-            <h3 className="font-[family-name:var(--font-label)] text-sm font-semibold uppercase tracking-[0.2em] text-oxblood">{group.category}</h3>
+            <h3 className="font-[family-name:var(--font-label)] text-sm font-semibold uppercase tracking-[0.2em] text-accent">{group.category}</h3>
             <div className="mt-4 flex flex-wrap gap-2">
               {group.items.map((s) => <Chip key={s}>{s}</Chip>)}
             </div>

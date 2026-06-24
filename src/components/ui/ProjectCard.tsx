@@ -9,7 +9,7 @@ export function ProjectCard({ project }: { project: Project }) {
     <motion.div whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 300, damping: 20 }}>
       <Link
         href={`/proyectos/${project.slug}/`}
-        className="group block overflow-hidden rounded-2xl border border-bone/15 bg-espresso/40"
+        className="group block overflow-hidden rounded-2xl border border-border bg-bg"
         aria-label={`Ver proyecto ${project.title}`}
       >
         <div className="relative aspect-video overflow-hidden">

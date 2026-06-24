@@ -10,6 +10,9 @@ const archivo = Archivo({ subsets: ['latin'], variable: '--font-archivo', weight
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', weight: ['400', '500'] });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk', weight: ['500', '600'] });
 
+// Sets the theme class before paint to avoid a flash of the wrong theme.
+const themeScript = `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();`;
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://jochi-garcia.vercel.app'),
   title: 'José García (Jochi) — Fullstack Developer',
@@ -26,6 +29,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${archivo.variable} ${inter.variable} ${spaceGrotesk.variable}`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
         <Cursor />
         <JochiAssistant />

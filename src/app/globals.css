@@ -1,23 +1,46 @@
 @import 'tailwindcss';
 
-@theme {
-  --color-cream: #efe7d8;
-  --color-espresso: #1c1916;
-  --color-oxblood: #7c2128;
-  --color-bone: #f2ede3;
+/* ===== Light mode (default) — "Hueso + Violeta eléctrico" ===== */
+:root {
+  color-scheme: light;
+  --bg: #f1eee8;
+  --surface: #e7e2d7;
+  --fg: #1a1726;
+  --accent: #6d28ff;
+  --on-accent: #ffffff;
+  --border: rgba(26, 23, 38, 0.12);
+}
+
+/* ===== Dark mode — "Carbón + Coral" ===== */
+.dark {
+  color-scheme: dark;
+  --bg: #16151a;
+  --surface: #211f27;
+  --fg: #f3eee9;
+  --accent: #ff5c4d;
+  --on-accent: #1a1410;
+  --border: rgba(243, 238, 233, 0.13);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-border: var(--border);
 
   --font-display: var(--font-archivo);
   --font-body: var(--font-inter);
   --font-label: var(--font-space-grotesk);
 }
 
-:root {
-  color-scheme: light;
-}
-
 html {
-  background-color: var(--color-cream);
-  color: var(--color-espresso);
+  background-color: var(--bg);
+  color: var(--fg);
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
 }
 
 body {
@@ -27,7 +50,7 @@ body {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--color-oxblood);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
@@ -50,7 +73,9 @@ button:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;

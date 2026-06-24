@@ -27,7 +27,7 @@ export function MagneticButton({ children, href, onClick, className }: Props) {
   const reset = () => { x.set(0); y.set(0); };
 
   const base =
-    'inline-flex items-center gap-2 rounded-full border border-oxblood px-6 py-3 font-[family-name:var(--font-label)] text-sm font-semibold text-oxblood transition-colors hover:bg-oxblood hover:text-bone';
+    'inline-flex items-center gap-2 rounded-full border border-accent px-6 py-3 font-[family-name:var(--font-label)] text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-on-accent';
 
   return (
     <motion.a

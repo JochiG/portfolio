@@ -5,13 +5,13 @@ import { Chip } from '@/components/ui/Chip';
 export function Hero() {
   return (
     <section id="inicio" className="relative flex min-h-screen flex-col justify-center px-6 md:px-16">
-      <span className="font-[family-name:var(--font-label)] text-xs font-semibold uppercase tracking-[0.2em] text-oxblood">
+      <span className="font-[family-name:var(--font-label)] text-xs font-semibold uppercase tracking-[0.2em] text-accent">
         {site.role}
       </span>
       <h1 className="mt-4 font-[family-name:var(--font-display)] uppercase leading-[0.9] tracking-tight">
         <span className="block text-base font-semibold normal-case tracking-normal opacity-55">me dicen</span>
         <span className="block text-7xl font-black md:text-8xl">
-          {site.nickname}<span className="text-oxblood">.</span>
+          {site.nickname}<span className="text-accent">.</span>
         </span>
         <span className="mt-2 block text-base font-semibold normal-case tracking-normal opacity-55">
           — pero en el DNI dice {site.fullName}

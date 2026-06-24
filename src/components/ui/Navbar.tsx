@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { site } from '@/data/site';
+import { ThemeToggle } from './ThemeToggle';
 
 const links = [
   { href: '#inicio', label: 'inicio' },
@@ -21,15 +22,18 @@ export function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 flex items-center justify-between px-6 font-[family-name:var(--font-label)] text-sm transition-all ${
-        scrolled ? 'bg-cream/80 py-3 backdrop-blur' : 'py-5'
+        scrolled ? 'bg-bg/80 py-3 backdrop-blur' : 'py-5'
       }`}
     >
-      <a href="#inicio" className="font-semibold text-oxblood">{site.nickname.toLowerCase()}.dev</a>
-      <nav className="flex gap-5">
-        {links.map((l) => (
-          <a key={l.href} href={l.href} className="opacity-70 transition-opacity hover:opacity-100">{l.label}</a>
-        ))}
-      </nav>
+      <a href="#inicio" className="font-semibold text-accent">{site.nickname.toLowerCase()}.dev</a>
+      <div className="flex items-center gap-3 md:gap-5">
+        <nav className="flex gap-3 md:gap-5">
+          {links.map((l) => (
+            <a key={l.href} href={l.href} className="opacity-70 transition-opacity hover:opacity-100">{l.label}</a>
+          ))}
+        </nav>
+        <ThemeToggle />
+      </div>
     </header>
   );
 }

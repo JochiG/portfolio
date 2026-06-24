@@ -11,7 +11,7 @@ export function Contact() {
     { name: 'Email', href: `mailto:${site.email}` },
   ];
   return (
-    <section id="contacto" className="bg-espresso px-6 py-32 text-center text-bone md:px-16">
+    <section id="contacto" className="bg-surface px-6 py-32 text-center md:px-16">
       <SectionLabel index={5} text="Contacto" />
       <h2 className="mx-auto mt-8 max-w-2xl font-[family-name:var(--font-display)] text-5xl font-black uppercase tracking-tight">
         Trabajemos juntos
@@ -24,10 +24,10 @@ export function Contact() {
         ))}
       </div>
       <div className="mt-10 flex flex-wrap justify-center gap-4">
-        <MagneticButton href={site.cvUrlEs} className="border-bone text-bone hover:bg-bone hover:text-espresso">
+        <MagneticButton href={site.cvUrlEs} className="">
           CV (Español) →
         </MagneticButton>
-        <MagneticButton href={site.cvUrlEn} className="border-bone text-bone hover:bg-bone hover:text-espresso">
+        <MagneticButton href={site.cvUrlEn} className="">
           CV (English) →
         </MagneticButton>
       </div>

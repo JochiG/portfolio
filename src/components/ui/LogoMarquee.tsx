@@ -29,18 +29,22 @@ export function LogoMarquee() {
       className="relative overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,#000_8%,#000_92%,transparent)]"
       aria-label="Tecnologías que uso"
     >
-      <div className="animate-marquee flex w-max items-center gap-12">
+      <div className="animate-marquee flex w-max items-center gap-6">
         {track.map((logo, i) => (
-          <Image
+          <div
             key={`${logo.name}-${i}`}
-            src={logo.src}
-            alt={logo.name}
-            title={logo.name}
-            width={44}
-            height={44}
-            className="h-11 w-11 shrink-0 object-contain opacity-75 transition-opacity duration-300 hover:opacity-100"
+            className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-white shadow-sm ring-1 ring-black/5"
             aria-hidden={i >= logos.length}
-          />
+          >
+            <Image
+              src={logo.src}
+              alt={logo.name}
+              title={logo.name}
+              width={40}
+              height={40}
+              className="h-10 w-10 object-contain"
+            />
+          </div>
         ))}
       </div>
     </div>

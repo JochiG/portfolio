@@ -55,7 +55,7 @@ export function JochiAssistant() {
         <button
           onClick={() => setMuted((m) => !m)}
           aria-label={muted ? 'Activar comentarios de Jochi' : 'Silenciar a Jochi'}
-          className="pointer-events-auto absolute -bottom-2 left-1/2 hidden -translate-x-1/2 rounded-full border border-espresso/25 bg-cream/85 px-2 py-0.5 font-[family-name:var(--font-label)] text-[10px] opacity-70 backdrop-blur transition hover:opacity-100 md:block"
+          className="pointer-events-auto absolute -bottom-2 left-1/2 hidden -translate-x-1/2 rounded-full border border-border bg-bg/85 px-2 py-0.5 font-[family-name:var(--font-label)] text-[10px] opacity-70 backdrop-blur transition hover:opacity-100 md:block"
         >
           {muted ? '🔊 Jochi' : '⏸ Jochi'}
         </button>
