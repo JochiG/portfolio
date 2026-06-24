@@ -8,9 +8,12 @@ type Props = { position: [number, number, number]; rotation: [number, number, nu
 
 export function ChromeOrb({ position, rotation }: Props) {
   const ref = useRef<Mesh>(null);
-  // subtle idle spin layered on top of scroll-driven rotation
+  const idleSpin = useRef(0);
   useFrame((_, delta) => {
-    if (ref.current) ref.current.rotation.y += delta * 0.15;
+    if (!ref.current) return;
+    idleSpin.current += delta * 0.15;
+    ref.current.position.set(position[0], position[1], position[2]);
+    ref.current.rotation.set(rotation[0], rotation[1] + idleSpin.current, rotation[2]);
   });
   return (
     <>

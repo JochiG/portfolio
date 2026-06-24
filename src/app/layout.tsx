@@ -3,6 +3,7 @@ import { Archivo, Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { SmoothScroll } from '@/components/motion/SmoothScroll';
 import { Cursor } from '@/components/motion/Cursor';
+import { MotionProvider } from '@/components/motion/MotionProvider';
 import { JochiAssistant } from '@/components/jochi/JochiAssistant';
 
 const archivo = Archivo({ subsets: ['latin'], variable: '--font-archivo', weight: ['600', '700', '800', '900'] });
@@ -28,7 +29,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Cursor />
         <JochiAssistant />
-        <SmoothScroll>{children}</SmoothScroll>
+        <MotionProvider>
+          <SmoothScroll>{children}</SmoothScroll>
+        </MotionProvider>
       </body>
     </html>
   );

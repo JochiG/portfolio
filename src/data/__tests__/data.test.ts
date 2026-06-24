@@ -18,7 +18,7 @@ describe('projects data', () => {
 describe('jochi messages', () => {
   it('cover the required anchors', () => {
     const anchors = jochiMessages.map((m) => m.anchor);
-    for (const a of ['hero', 'about', 'proyectos', 'stack', 'experiencia', 'contacto']) {
+    for (const a of ['inicio', 'about', 'proyectos', 'stack', 'experiencia', 'contacto']) {
       expect(anchors).toContain(a);
     }
   });
