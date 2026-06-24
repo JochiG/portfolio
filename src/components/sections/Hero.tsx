@@ -24,6 +24,10 @@ export function Hero() {
       <div className="mt-10">
         <MagneticButton href="#proyectos">Ver proyectos →</MagneticButton>
       </div>
+      <div className="pointer-events-none absolute right-8 top-1/2 hidden -translate-y-1/2 motion-reduce:block">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/images/jochi-static.png" alt="" className="h-40 w-40" />
+      </div>
     </section>
   );
 }
