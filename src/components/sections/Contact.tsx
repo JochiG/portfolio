@@ -12,7 +12,7 @@ export function Contact() {
   ];
   return (
     <section id="contacto" className="bg-surface px-6 py-32 text-center md:px-16">
-      <SectionLabel index={5} text="Contacto" />
+      <SectionLabel text="hablemos" />
       <h2 className="mx-auto mt-8 max-w-2xl font-[family-name:var(--font-display)] text-5xl font-black uppercase tracking-tight">
         Trabajemos juntos
       </h2>

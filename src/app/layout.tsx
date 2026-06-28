@@ -5,6 +5,7 @@ import { SmoothScroll } from '@/components/motion/SmoothScroll';
 import { Cursor } from '@/components/motion/Cursor';
 import { MotionProvider } from '@/components/motion/MotionProvider';
 import { JochiAssistant } from '@/components/jochi/JochiAssistant';
+import { site } from '@/data/site';
 
 const archivo = Archivo({ subsets: ['latin'], variable: '--font-archivo', weight: ['600', '700', '800', '900'] });
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', weight: ['400', '500'] });
@@ -14,7 +15,7 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space
 const themeScript = `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://jochi-garcia.vercel.app'),
+  metadataBase: new URL(site.url),
   title: 'José García (Jochi) — Fullstack Developer',
   description: 'Portfolio de José Ignacio García Olmos, fullstack developer. Sitios y sistemas web a medida.',
   openGraph: {

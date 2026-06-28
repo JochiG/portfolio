@@ -7,7 +7,7 @@ import { LogoMarquee } from '@/components/ui/LogoMarquee';
 export function Skills() {
   return (
     <section id="stack" className="px-6 py-28 md:px-16">
-      <SectionLabel index={3} text="Stack" />
+      <SectionLabel text="mis herramientas" />
       <h2 className="mt-8 font-[family-name:var(--font-display)] text-4xl font-extrabold">Tecnologías</h2>
       <div className="mt-10">
         <LogoMarquee />

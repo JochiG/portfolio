@@ -25,7 +25,7 @@ export function Navbar() {
         scrolled ? 'bg-bg/80 py-3 backdrop-blur' : 'py-5'
       }`}
     >
-      <a href="#inicio" className="font-semibold text-accent">{site.nickname.toLowerCase()}.dev</a>
+      <a href="#inicio" className="font-semibold text-accent">{site.domain}</a>
       <div className="flex items-center gap-3 md:gap-5">
         <nav className="flex gap-3 md:gap-5">
           {links.map((l) => (

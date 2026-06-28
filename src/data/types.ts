@@ -37,6 +37,8 @@ export type SiteConfig = {
   nickname: string;
   role: string;
   tagline: string;
+  url: string;        // full site url, e.g. https://jose-garcia.dev
+  domain: string;     // bare domain for display, e.g. jose-garcia.dev
   whatsapp: string;   // digits only for wa.me
   instagram: string;  // handle without @
   github: string;     // username

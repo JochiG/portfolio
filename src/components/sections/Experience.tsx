@@ -5,7 +5,7 @@ import { Reveal } from '@/components/ui/Reveal';
 export function Experience() {
   return (
     <section id="experiencia" className="px-6 py-28 md:px-16">
-      <SectionLabel index={4} text="Experiencia" />
+      <SectionLabel text="por dónde pasé" />
       <h2 className="mt-8 font-[family-name:var(--font-display)] text-4xl font-extrabold">Trayectoria</h2>
       <ol className="mt-12 border-l-2 border-border pl-6">
         {experience.map((item, i) => (

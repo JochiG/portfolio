@@ -6,7 +6,7 @@ import { Reveal } from '@/components/ui/Reveal';
 export function About() {
   return (
     <section id="about" className="px-6 py-20 md:px-16 md:py-28">
-      <SectionLabel index={1} text="Sobre mí" />
+      <SectionLabel text="quién soy" />
       <div className="mt-8 grid gap-10 md:grid-cols-[1fr_320px] md:items-center">
         <Reveal>
           <h2 className="font-[family-name:var(--font-display)] text-3xl font-extrabold md:text-4xl">

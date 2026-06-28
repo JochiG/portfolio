@@ -6,6 +6,8 @@ export const site: SiteConfig = {
   nickname: 'Jochi',
   role: 'Fullstack Developer',
   tagline: 'Construyo productos web de punta a punta, con buen gusto.',
+  url: 'https://jose-garcia.dev',
+  domain: 'jose-garcia.dev',
   whatsapp: '542478407856',
   instagram: 'jochigarcia_',
   github: 'JochiG',
